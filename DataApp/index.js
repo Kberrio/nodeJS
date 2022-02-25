@@ -7,8 +7,8 @@ app.use(express.json({ limit: '1mb' }));
 
 app.post('/api', (req, res) => {
 	console.log('I got a request!');
-	console.log(req.body);
-	const data = request.body;
+	console.log(`The body is ${req.body}`);
+	const data = req.body;
 
 	res.json({
 		status: 'success',
